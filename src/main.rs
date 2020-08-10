@@ -29,6 +29,7 @@ fn main() {
     
     while window.is_open() && !window.is_key_down(Key::Escape) {
         // This is a very manual mapping of input right now, this may change in the future but is fine for now. 
+        // TODO: Repeat this a number of times equal to the interpreter hz / framerate.
         emulator.update::<U32BufferScreen>(&emulator::HexPad {
             zero: window.is_key_down(Key::X),
             one: window.is_key_down(Key::Key1),
